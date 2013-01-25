@@ -1,0 +1,81 @@
+<html>
+
+<head>
+
+
+</head>
+
+
+<body>
+<div id="rankingTableView">
+
+		<form>
+			<input type="text" placeholder="teamnaam" id="teamName">
+			<input type="text" placeholder="win" id="win">
+			<input type="text" placeholder="lost" id="lost">
+			<input type="text" placeholder="setsWon" id="setsWon">
+			<input type="text" placeholder="setsLost" id="setsLost">
+			<input type="text" placeholder="pointsWon" id="pointsWon">
+			<input type="text" placeholder="pointsLost" id="pointsLost">
+			<button id="addRank"> Add New Rank</button>
+		</form>
+
+		<form>
+			<button id="filterWins">Toon wins > losses</button>
+			<button id="showAll">Toon alles</button>
+		</form>
+
+		<a href="ranking.html#tournament">Tournament</a>
+		<a href="ranking.html#notournament">Tournament</a>
+
+
+		<table id="rankingTable">
+
+	 
+      </table>
+</div>
+<script id="rankingView" type="text/template">
+				<td><%= team %></td>
+			
+				<td>Win: </td>
+				<td><strong><%= Win %></strong></td>
+
+				<td>Lost: </td>
+				<td><strong><%= Lost %></strong></td>
+
+				<td>Sets won: </td>
+				<td><strong><%= Sw %></strong></td>
+
+				<td>Sets lost: </td>
+				<td><strong><%= Sl %></strong></td>	
+				<td>Points won: </td>
+				<td><strong><%= Pw %></strong></td>
+
+				<td>Points lost: </td>
+				<td><strong><%= Pl %></strong></td>
+				<td><button class="deleteRanking">Verwijderen</button>
+	
+		
+ </script>
+
+		<!-- Libraries -->
+        <script src="js/libs/jquery-1.7.1.min.js"></script>
+        <script src="js/libs/json2.js"></script>
+        <script src="js/libs/underscore-min.js"></script>
+        <script src="js/libs/backbone-min.js"></script>
+
+		<!-- Application -->
+		<script src="js/rankingApp.js"></script>
+		<script src="js/app/models/ranking.js"></script>
+		<script src="js/app/collections/rankings.js"></script>
+		<script src="js/app/views/rankingView.js"></script>
+		<script src="js/app/views/rankingList.js"></script>
+		<script src="router.js"></script>
+
+
+
+
+
+</body>
+
+</html>
